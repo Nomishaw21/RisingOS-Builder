@@ -42,7 +42,7 @@ function find_repo_with_fallback {
   local repo_name=$1
   local username=$2
   local remote_name=$3
-  local orgs=("RisingOSS-devices" "LineageOS")
+  local repo=("Nomishaw21" "LineageOS")
   
   if [[ -n "$username" ]]; then
     repo_url=$(get_remote_url "$remote_name" "$username/$repo_name")
@@ -137,7 +137,7 @@ function clone_and_check_dependencies {
 }
 
 function main {
-  local primary_repo_url="https://github.com/RisingOSS-devices/android_device_${BRAND}_${CODENAME}.git"
+  local primary_repo_url="https://github.com/Nomishaw21/temp.git"
   local fallback_repo_url="https://github.com/LineageOS/android_device_${BRAND}_${CODENAME}.git"
 
   if repo_exists "$primary_repo_url"; then
